@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.awc;
 
 import org.json.JSONObject;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +15,7 @@ public class Logger2Application {
 		//Configurator.initialize(null, "log4j2.xml");
 		ApplicationContext ctx = SpringApplication.run(Logger2Application.class, args);
 		CustomLogger logger = ctx.getBean(CustomLogger.class);
-		logger.CustomLogger("sff");
+		logger.CustomLogger("awc");
 		logger.writeError("E001", new JSONObject(), "Error occurred", new RuntimeException("Example exception"));
         //logger.writeWarning("W001", new JSONObject(), "Warning message");
         logger.writeInfo("I001", "Information message");

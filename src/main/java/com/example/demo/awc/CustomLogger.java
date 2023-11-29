@@ -1,5 +1,5 @@
 
-package com.example.demo;
+package com.example.demo.awc;
 
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -13,11 +13,9 @@ import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.logging.LogLevel;
 import org.springframework.stereotype.Component;
-
-
 import org.json.JSONObject;
 
-@Component("sff")
+@Component("awc")
 public class CustomLogger implements LoggerInterface{
 
     private Logger logger;
