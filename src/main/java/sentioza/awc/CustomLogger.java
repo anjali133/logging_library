@@ -1,16 +1,11 @@
 
-package com.example.demo.awc;
+package sentioza.awc;
 
 import java.net.InetAddress;
-import java.net.ServerSocket;
 import java.net.UnknownHostException;
 import java.time.Instant;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.logging.LogLevel;
 import org.springframework.stereotype.Component;
 import org.json.JSONObject;
@@ -130,7 +125,7 @@ public class CustomLogger implements LoggerInterface{
         logObject.put("userInfo", buildUserInfo());
         logObject.put("timestamp", Instant.now().toString());
         
-        if(severity == LogLevel.INFO) {
+        if(severity == LogLevel.INFO || severity == LogLevel.WARN || severity == LogLevel.DEBUG) {
         	logObject.put("messageDetail", buildInfoMessageDetail());
         }     
         if(severity == LogLevel.ERROR) {

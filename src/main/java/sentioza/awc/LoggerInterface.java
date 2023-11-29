@@ -1,4 +1,4 @@
-package com.example.demo.awc;
+package sentioza.awc;
 
 import org.json.JSONObject;
 
