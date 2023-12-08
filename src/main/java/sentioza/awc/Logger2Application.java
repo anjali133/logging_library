@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 
 @SpringBootApplication
-
+    
 public class Logger2Application {
 
 	public static void main(String[] args) {

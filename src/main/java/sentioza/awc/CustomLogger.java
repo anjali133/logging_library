@@ -1,4 +1,3 @@
-
 package sentioza.awc;
 
 import java.net.InetAddress;
@@ -23,7 +22,7 @@ public class CustomLogger implements LoggerInterface{
         if (logger.isErrorEnabled()) {
             JSONObject logObject = buildLogObject(messageCode, LogLevel.ERROR, message);
             logger.error(logObject.toString(), stackTrace);
-        } 
+        } 							
     }
     @Override
     public void writeWarning(String messageCode, JSONObject messageDetail, String message) {
@@ -70,15 +69,13 @@ public class CustomLogger implements LoggerInterface{
         deviceInfo.put("osVersion", System.getProperty("os.version"));
         return deviceInfo;
     }
-
     private JSONObject buildUserInfo() {
     	JSONObject userInfo = new JSONObject();
         userInfo.put("userId", "");
         userInfo.put("tenentId", "");
         userInfo.put("clientId", "");
         return userInfo;
-    }
-    
+    }   
     private JSONObject buildInfoMessageDetail() {
    	 JSONObject messageDetail = new JSONObject();
     	messageDetail.put("correlationId", "e5b3d8a2-e523-4e3f-ac7a-b028a2ff3014");
@@ -88,14 +85,12 @@ public class CustomLogger implements LoggerInterface{
     	messageDetail.put("requestBody", "{}");
         return messageDetail;
     }
-    
     private JSONObject buildRequestingDeviceInfo() {
     	 JSONObject requestingDeviceInfo = new JSONObject();
     	requestingDeviceInfo.put("name", "UI device name");
     	requestingDeviceInfo.put("operatingSystem", "xyz");
         return requestingDeviceInfo;
     }
-    
     private JSONObject buildErrorMessageDetail() {
     	 JSONObject messageDetail = new JSONObject();
     	  try {
@@ -110,7 +105,6 @@ public class CustomLogger implements LoggerInterface{
   		}
         return messageDetail;
     }
-
     private JSONObject buildLogObject(String messageCode, LogLevel severity, String message) {
         JSONObject logObject = new JSONObject();
         logObject.put("componentName", "awarecare");
@@ -137,10 +131,4 @@ public class CustomLogger implements LoggerInterface{
         }
        return logObject;
     }
-
-  
 }
-
-
-
-

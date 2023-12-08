@@ -8,7 +8,7 @@ public interface LoggerInterface {
     void writeInfo(String messageCode, String message);
     void writeDebug(String messageCode, JSONObject messageDetail, String message);
     boolean isDebugEnabled();
-    boolean isInfoEnabled();
+    boolean isInfoEnabled();  
 
 
 }
